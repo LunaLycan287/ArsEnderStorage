@@ -1,0 +1,73 @@
+{
+	"ars_nouveau.glyph_desc.test": "This is my test!",
+	"ars_nouveau.glyph_name.test": "Test",
+	"item.ars_nouveau.glyph_test": "Glyph of Testing",
+
+	"ars_nouveau.glyph_name.enderstorage_chest": "EnderStorage Chest",
+	"ars_nouveau.glyph_desc.enderstorage_chest": "Open an EnderStorage Chest",
+	"item.ars_nouveau.enderstorage_chest": "Glyph of access EnderStorage",
+
+	"ars_nouveau.glyph_name.color_black": "Color Black Augment",
+	"ars_nouveau.glyph_desc.color_black": "Black Color Augment",
+	"item.ars_nouveau.glyph_color_black": "Glyph of Black Color Frequency",
+
+	"ars_nouveau.glyph_name.color_blue": "Color Blue Augment",
+	"ars_nouveau.glyph_desc.color_blue": "Blue Color Augment",
+	"item.ars_nouveau.glyph_color_blue": "Glyph of Blue Color Frequency",
+
+	"ars_nouveau.glyph_name.color_brown": "Color Brown Augment",
+	"ars_nouveau.glyph_desc.color_brown": "Brown Color Augment",
+	"item.ars_nouveau.glyph_color_brown": "Glyph of Brown Color Frequency",
+
+	"ars_nouveau.glyph_name.color_cyan": "Color Cyan Augment",
+	"ars_nouveau.glyph_desc.color_cyan": "Cyan Color Augment",
+	"item.ars_nouveau.glyph_color_cyan": "Glyph of Cyan Color Frequency",
+
+	"ars_nouveau.glyph_name.color_gray": "Color Gray Augment",
+	"ars_nouveau.glyph_desc.color_gray": "Gray Color Augment",
+	"item.ars_nouveau.glyph_color_gray": "Glyph of Gray Color Frequency",
+
+	"ars_nouveau.glyph_name.color_green": "Color Green Augment",
+	"ars_nouveau.glyph_desc.color_green": "Green Color Augment",
+	"item.ars_nouveau.glyph_color_green": "Glyph of Green Color Frequency",
+
+	"ars_nouveau.glyph_name.color_light_blue": "Color Light Blue Augment",
+	"ars_nouveau.glyph_desc.color_light_blue": "Light Blue Color Augment",
+	"item.ars_nouveau.glyph_color_light_blue": "Glyph of Light Blue Color Frequency",
+
+	"ars_nouveau.glyph_name.color_light_gray": "Color Light Gray Augment",
+	"ars_nouveau.glyph_desc.color_light_gray": "Light Gray Color Augment",
+	"item.ars_nouveau.glyph_color_light_gray": "Glyph of Light Gray Color Frequency",
+
+	"ars_nouveau.glyph_name.color_lime": "Color Lime Augment",
+	"ars_nouveau.glyph_desc.color_lime": "Lime Color Augment",
+	"item.ars_nouveau.glyph_color_lime": "Glyph of Lime Color Frequency",
+
+	"ars_nouveau.glyph_name.color_magenta": "Color Magenta Augment",
+	"ars_nouveau.glyph_desc.color_magenta": "Magenta Color Augment",
+	"item.ars_nouveau.glyph_color_magenta": "Glyph of Magenta Color Frequency",
+
+	"ars_nouveau.glyph_name.color_orange": "Color Orange Augment",
+	"ars_nouveau.glyph_desc.color_orange": "Orange Color Augment",
+	"item.ars_nouveau.glyph_color_orange": "Glyph of Orange Color Frequency",
+
+	"ars_nouveau.glyph_name.color_pink": "Color Pink Augment",
+	"ars_nouveau.glyph_desc.color_pink": "Pink Color Augment",
+	"item.ars_nouveau.glyph_color_pink": "Glyph of Pink Color Frequency",
+
+	"ars_nouveau.glyph_name.color_purple": "Color Purple Augment",
+	"ars_nouveau.glyph_desc.color_purple": "Purple Color Augment",
+	"item.ars_nouveau.glyph_color_purple": "Glyph of Purple Color Frequency",
+
+	"ars_nouveau.glyph_name.color_red": "Color Red Augment",
+	"ars_nouveau.glyph_desc.color_red": "Red Color Augment",
+	"item.ars_nouveau.glyph_color_red": "Glyph of Red Color Frequency",
+
+	"ars_nouveau.glyph_name.color_white": "Color White Augment",
+	"ars_nouveau.glyph_desc.color_white": "White Color Augment",
+	"item.ars_nouveau.glyph_color_white": "Glyph of White Color Frequency",
+
+	"ars_nouveau.glyph_name.color_yellow": "Color Yellow Augment",
+	"ars_nouveau.glyph_desc.color_yellow": "Yellow Color Augment",
+	"item.ars_nouveau.glyph_color_yellow": "Glyph of Yellow Color Frequency"
+}

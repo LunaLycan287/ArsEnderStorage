@@ -1,6 +1,9 @@
-package com.example.examplemod;
+package io.github.moonwolf287.ars_enderstorage;
 
-import com.example.examplemod.glyphs.TestEffect;
+import com.hollingsworth.arsnouveau.api.spell.AbstractAugment;
+import io.github.moonwolf287.ars_enderstorage.glyphs.AugmentColor;
+import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStorageChest;
+import io.github.moonwolf287.ars_enderstorage.glyphs.TestEffect;
 import com.hollingsworth.arsnouveau.api.ArsNouveauAPI;
 import com.hollingsworth.arsnouveau.api.spell.AbstractSpellPart;
 
@@ -12,6 +15,12 @@ public class ArsNouveauRegistry {
 
     public static void registerGlyphs(){
         register(TestEffect.INSTANCE);
+        register(EnderStorageChest.INSTANCE);
+
+        AbstractAugment[] colorGlyphs = AugmentColor.getAllAugmentColor();
+        for (AbstractAugment glyph : colorGlyphs){
+            register(glyph);
+        }
     }
 
     public static void register(AbstractSpellPart spellPart){

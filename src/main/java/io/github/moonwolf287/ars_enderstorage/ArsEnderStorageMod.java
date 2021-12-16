@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package io.github.moonwolf287.ars_enderstorage;
 
 import net.minecraft.block.Block;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -14,18 +14,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(ExampleMod.MODID)
-public class ExampleMod
+@Mod(ArsEnderStorageMod.MODID)
+public class ArsEnderStorageMod
 {
     // Directly reference a log4j logger.
     public static ForgeConfigSpec SERVER_CONFIG;
-    public static final String MODID = "examplemod";
+    public static final String MODID = "ars_enderstorage";
 
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public ExampleMod() {
+    public ArsEnderStorageMod() {
         ArsNouveauRegistry.registerGlyphs();
-        ExampleConfig.registerGlyphConfigs();
+        ArsEnderStorageConfig.registerGlyphConfigs();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         MinecraftForge.EVENT_BUS.register(this);

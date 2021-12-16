@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package io.github.moonwolf287.ars_enderstorage;
 
 import com.hollingsworth.arsnouveau.api.RegistryHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -6,10 +6,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 
 @Mod.EventBusSubscriber
-public class ExampleConfig {
+public class ArsEnderStorageConfig {
 
     public static void registerGlyphConfigs(){
-        RegistryHelper.generateConfig(ExampleMod.MODID, ArsNouveauRegistry.registeredSpells);
+        RegistryHelper.generateConfig(ArsEnderStorageMod.MODID, ArsNouveauRegistry.registeredSpells);
     }
 
     @SubscribeEvent
