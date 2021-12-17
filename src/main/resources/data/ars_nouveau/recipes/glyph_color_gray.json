@@ -1,0 +1,6 @@
+{
+  "type": "ars_nouveau:glyph_recipe",
+  "tier": "ONE",
+  "input": "minecraft:gray_dye",
+  "output": "ars_nouveau:glyph_color_gray"
+}

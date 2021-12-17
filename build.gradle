@@ -26,7 +26,7 @@ apply plugin: 'maven-publish'
 
 version = '1.0.0'
 group = 'io.github.moonwolf287.arsenderstorage' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'ars_ender_storage-1.16.5'
+archivesBaseName = 'ars_enderstorage-1.16.5'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -47,6 +47,7 @@ minecraft {
     // Default run configurations.
     // These can be tweaked, removed, or duplicated as needed.
     runs {
+
         client {
             workingDirectory project.file('run')
 
@@ -97,7 +98,7 @@ minecraft {
             // Recommended logging level for the console
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'an_addon', '--all', '--output', file('src/generated/resources/'), "--existing", "\"" + sourceSets.main.resources.srcDirs[0] + "\""
+            args '--mod', 'ars_enderstorage', '--all', '--output', file('src/generated/resources/'), "--existing", "\"" + sourceSets.main.resources.srcDirs[0] + "\""
 
             mods {
                 an_addon {

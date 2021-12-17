@@ -1,7 +1,7 @@
 package io.github.moonwolf287.ars_enderstorage;
 
 import com.hollingsworth.arsnouveau.api.spell.AbstractAugment;
-import io.github.moonwolf287.ars_enderstorage.glyphs.AugmentColor;
+import io.github.moonwolf287.ars_enderstorage.glyphs.ColorGlyph;
 import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStorageChest;
 import io.github.moonwolf287.ars_enderstorage.glyphs.TestEffect;
 import com.hollingsworth.arsnouveau.api.ArsNouveauAPI;
@@ -17,10 +17,23 @@ public class ArsNouveauRegistry {
         register(TestEffect.INSTANCE);
         register(EnderStorageChest.INSTANCE);
 
-        AbstractAugment[] colorGlyphs = AugmentColor.getAllAugmentColor();
-        for (AbstractAugment glyph : colorGlyphs){
-            register(glyph);
-        }
+        // Color Glyphs for all MC colors
+        register(ColorGlyph.WHITE);
+        register(ColorGlyph.ORANGE);
+        register(ColorGlyph.MAGENTA);
+        register(ColorGlyph.LIGHT_BLUE);
+        register(ColorGlyph.YELLOW);
+        register(ColorGlyph.LIME);
+        register(ColorGlyph.PINK);
+        register(ColorGlyph.GRAY);
+        register(ColorGlyph.LIGHT_GRAY);
+        register(ColorGlyph.CYAN);
+        register(ColorGlyph.PURPLE);
+        register(ColorGlyph.BLUE);
+        register(ColorGlyph.BROWN);
+        register(ColorGlyph.GREEN);
+        register(ColorGlyph.RED);
+        register(ColorGlyph.BLACK);
     }
 
     public static void register(AbstractSpellPart spellPart){

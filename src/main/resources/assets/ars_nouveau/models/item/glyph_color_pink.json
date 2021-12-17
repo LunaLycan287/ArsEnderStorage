@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ars_enderstorage:items/color_pink"
+    "layer0": "ars_nouveau:items/color_pink"
   }
 }
