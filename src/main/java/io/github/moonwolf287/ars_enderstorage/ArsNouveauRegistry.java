@@ -1,9 +1,7 @@
 package io.github.moonwolf287.ars_enderstorage;
 
-import com.hollingsworth.arsnouveau.api.spell.AbstractAugment;
 import io.github.moonwolf287.ars_enderstorage.glyphs.ColorGlyph;
 import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStorageChest;
-import io.github.moonwolf287.ars_enderstorage.glyphs.TestEffect;
 import com.hollingsworth.arsnouveau.api.ArsNouveauAPI;
 import com.hollingsworth.arsnouveau.api.spell.AbstractSpellPart;
 
@@ -11,10 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArsNouveauRegistry {
-    public static List<AbstractSpellPart> registeredSpells = new ArrayList<>();
+    protected static List<AbstractSpellPart> registeredSpells = new ArrayList<>();
 
-    public static void registerGlyphs(){
-        register(TestEffect.INSTANCE);
+    private ArsNouveauRegistry() {}
+
+    protected static void registerGlyphs() {
         register(EnderStorageChest.INSTANCE);
 
         // Color Glyphs for all MC colors
@@ -36,7 +35,7 @@ public class ArsNouveauRegistry {
         register(ColorGlyph.BLACK);
     }
 
-    public static void register(AbstractSpellPart spellPart){
+    private static void register(AbstractSpellPart spellPart) {
         ArsNouveauAPI.getInstance().registerSpell(spellPart.tag,spellPart);
         registeredSpells.add(spellPart);
     }

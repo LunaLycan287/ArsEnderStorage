@@ -1,8 +1,4 @@
 {
-	"ars_nouveau.glyph_desc.test": "This is my test!",
-	"ars_nouveau.glyph_name.test": "Test",
-	"item.ars_nouveau.glyph_test": "Glyph of Testing",
-
 	"ars_nouveau.glyph_name.enderstorage_chest": "Glyph of EnderStorage Chest",
 	"ars_nouveau.glyph_desc.enderstorage_chest": "Open an EnderStorage Chest.",
 	"item.ars_nouveau.glyph_enderstorage_chest": "Glyph of access EnderStorage Chest",

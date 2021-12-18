@@ -17,10 +17,10 @@ import org.apache.logging.log4j.Logger;
 @Mod(ArsEnderStorageMod.MODID)
 public class ArsEnderStorageMod
 {
-    // Directly reference a log4j logger.
     public static ForgeConfigSpec SERVER_CONFIG;
     public static final String MODID = "ars_enderstorage";
 
+    // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
     public ArsEnderStorageMod() {
@@ -31,12 +31,12 @@ public class ArsEnderStorageMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
-
+    private void setup(final FMLCommonSetupEvent event) {
+        //Nothing to do here (yet)
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        //Nothing to do here (yet)
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

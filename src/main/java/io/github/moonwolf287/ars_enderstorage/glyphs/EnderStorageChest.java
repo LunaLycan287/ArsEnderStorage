@@ -19,8 +19,6 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.*;
-import net.minecraft.loot.LootContext;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
@@ -51,7 +49,8 @@ public class EnderStorageChest extends AbstractEffect {
     }
 
     @Override
-    public void onResolve(RayTraceResult rayTraceResult, World world, @Nullable LivingEntity shooter, SpellStats spellStats, SpellContext spellContext) {
+    public void onResolve(RayTraceResult rayTraceResult, World world, @Nullable LivingEntity shooter,
+                          SpellStats spellStats, SpellContext spellContext) {
         Spell spell = spellContext.getSpell();
         Frequency freq = new Frequency();
 
@@ -61,22 +60,15 @@ public class EnderStorageChest extends AbstractEffect {
         while(spellContext.getCurrentIndex() < spell.getSpellSize()) {
             AbstractSpellPart part = spellContext.nextSpell();
             if(part instanceof ColorGlyph) {
-                EnumColour colour = ((ColorGlyph) part).getColour();
-                switch (colorPosition++) {
-                    case 1: freq.setLeft(colour); break;
-                    case 2: freq.setMiddle(colour); break;
-                    case 3: freq.setRight(colour); break;
-                    default: break;
+               frequencySetColor(colorPosition++, ((ColorGlyph) part).getColour(), freq);
+            }  else {
+                if (part instanceof EffectPlaceBlock) {
+                    type = InteractionType.PLACE;
+                    augments = spell.getAugments(spellContext.getCurrentIndex() - 1, shooter);
+                } else if (part instanceof EffectBreak) {
+                    type = InteractionType.BREAK;
+                    augments = spell.getAugments(spellContext.getCurrentIndex() - 1, shooter);
                 }
-            } else if (part instanceof EffectPlaceBlock) {
-                type = InteractionType.PLACE;
-                augments = spell.getAugments(spellContext.getCurrentIndex()-1,shooter);
-                break;
-            } else if (part instanceof EffectBreak) {
-                type = InteractionType.BREAK;
-                augments = spell.getAugments(spellContext.getCurrentIndex()-1,shooter);
-                break;
-            } else {
                 break;
             }
         }
@@ -89,22 +81,16 @@ public class EnderStorageChest extends AbstractEffect {
                                                                                                    EnderItemStorage.TYPE);
 
             SpellStats subSpellStats = getSpellStats(blockTraceResult, world, shooter, spellContext, augments);
-            assert shooter != null;
             List<BlockPos> posList = SpellUtil.calcAOEBlocks(shooter, blockTraceResult.getBlockPos(),
                                                              blockTraceResult, subSpellStats);
 
-            if (type == InteractionType.PLACE) {
-
-                for (BlockPos pos : posList) {
-                    doPlaceBlock(blockTraceResult, pos, storage, world);
+            for (BlockPos pos : posList) {
+                if (type == InteractionType.PLACE) {
+                        doPlaceBlock(blockTraceResult, pos, storage, world);
+                } else { //type == InteractionType.BREAK
+                         doBreakBlock(pos, storage, world, subSpellStats, shooter);
                 }
-            } else { //type == InteractionType.BREAK
-                ItemStack stack = subSpellStats.hasBuff(AugmentSensitive.INSTANCE) ? new ItemStack(Items.SHEARS) :
-                                  new ItemStack(Items.DIAMOND_PICKAXE);
-                for (BlockPos pos : posList) {
-                    doBreakBlock(blockTraceResult, pos, storage, world, subSpellStats, shooter, stack);
-                }
-         }
+            }
         }
 
         // FIXME: We have to cancel the Spell after our special cases have been handled, otherwise SpellResolver will break
@@ -117,6 +103,17 @@ public class EnderStorageChest extends AbstractEffect {
             Which means, that we would completely break the resolving even if we adjust the spell index.
          */
         spellContext.setCanceled(true);
+    }
+
+    private void frequencySetColor(int index, EnumColour colour, Frequency frequency) {
+        // @formatter:off
+        switch (index) {
+            case 1: frequency.setLeft(colour); break;
+            case 2: frequency.setMiddle(colour); break;
+            case 3: frequency.setRight(colour); break;
+            default: break;
+        }
+        // @formatter:on
     }
 
     private void doOpenChest(World world, LivingEntity shooter, Frequency frequency) {
@@ -143,12 +140,14 @@ public class EnderStorageChest extends AbstractEffect {
         }
     }
 
-    private void doBreakBlock(BlockRayTraceResult blockTraceResult, BlockPos pos, EnderItemStorage storage,
-                              World world, SpellStats subSpellStats, @Nullable LivingEntity shooter, ItemStack toolStack) {
+    private void doBreakBlock(BlockPos pos, EnderItemStorage storage,
+                              World world, SpellStats subSpellStats, @Nullable LivingEntity shooter) {
         if(!canBlockBeHarvested(subSpellStats, world, pos) ||
            !BlockUtil.destroyRespectsClaim(getPlayer(shooter,(ServerWorld) world),world, pos)) {
             return;
         }
+        ItemStack toolStack = subSpellStats.hasBuff(AugmentSensitive.INSTANCE) ? new ItemStack(Items.SHEARS) :
+                          new ItemStack(Items.DIAMOND_PICKAXE);
 
         BlockState state = world.getBlockState(pos);
         Block block = state.getBlock();
