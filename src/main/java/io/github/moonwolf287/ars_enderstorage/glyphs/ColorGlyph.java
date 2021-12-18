@@ -43,6 +43,8 @@ public class ColorGlyph extends AbstractEffect {
         return capitalizedColor + " Frequency Spell";
     }
 
+    public EnumColour getColour() { return this.colour; }
+
     @Override
     public Tier getTier() {
         return Tier.ONE;
