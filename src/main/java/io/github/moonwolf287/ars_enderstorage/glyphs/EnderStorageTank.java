@@ -79,6 +79,11 @@ public class EnderStorageTank extends AbstractEnderStorageEffect {
             if (!world.getFluidState(pos).isEmpty() && world.getFluidState(pos).isSource()) {
                 hitLiquid = true;
 
+                // Don't need to try picking up if we are full anyway
+                if ((storage.getFluidAmount() + FluidAttributes.BUCKET_VOLUME) > storage.getCapacity()) {
+                    break;
+                }
+
                 Fluid fluid = world.getFluidState(pos).getType();
                 // storage.getFluid = FluidStack to get actual fluid we have to do FluidStack.getFluid() again
                 if ((storage.getFluidAmount() == 0 || storage.getFluid().getFluid() == fluid) &&
@@ -107,8 +112,8 @@ public class EnderStorageTank extends AbstractEnderStorageEffect {
                 ((IWaterLoggable) block).placeLiquid(world, pos, world.getBlockState(pos), fluid.defaultFluidState());
                 storage.drain(FluidAttributes.BUCKET_VOLUME, IFluidHandler.FluidAction.EXECUTE);
             } else {
-
-                BlockPos hitPos = pos.relative(direction);
+                // TODO: use blockState.isAir() in 1.17
+                BlockPos hitPos = world.getBlockState(pos).getBlock().is(Blocks.AIR) ? pos : pos.relative(direction);
                 if (!BlockUtil.destroyRespectsClaim(getPlayer(shooter, (ServerWorld) world), world, pos)) {
                     continue;
                 }
