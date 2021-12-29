@@ -27,22 +27,20 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 
-version = '1.0.0'
-group = 'io.github.moonwolf287.arsenderstorage' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'ars_enderstorage-1.16.5'
+version = mod_version
+group = groupid // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = modid + '-' + mc_version
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-
-
     // The mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   Snapshot are built nightly.
     // stable_#            Stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
 
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: 'official', version: mc_version
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -140,37 +138,27 @@ repositories {
     mavenLocal()
 }
 dependencies {
-
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.20'
+    minecraft 'net.minecraftforge:forge:' + mc_version + '-' + forge_version
     runtimeOnly fg.deobf("curse.maven:exp-407174:3188120")  // Shutup experimental settings
-//    runtimeOnly fg.deobf("curse.maven:exp-231951:3326143")  // Immersive engineering
-//    compileOnly fg.deobf("curse.maven:exp-231951:3326143")
-//    runtimeOnly fg.deobf("curse.maven:exp-268560:3206392")  // Mekanism
-//    compileOnly fg.deobf("curse.maven:exp-268560:3206392")
 
-    implementation fg.deobf("codechicken:CodeChickenLib:1.16.5-4.0.5.+:universal")
+    implementation fg.deobf("codechicken:CodeChickenLib:" + codechickenlib_version + ":universal")
 
-    implementation fg.deobf("codechicken:EnderStorage:1.16.5-2.8.0.+:universal")
+    implementation fg.deobf("codechicken:EnderStorage:" + enderstorage_version + ":universal")
 
-    runtimeOnly fg.deobf("curse.maven:exp-401955:3580842")  // Ars Nouveau 1.16.5-1.24.11
-    compileOnly fg.deobf("curse.maven:exp-401955:3580842")
+    runtimeOnly fg.deobf("curse.maven:exp-401955:" + arsnouveau_fileid)
+    compileOnly fg.deobf("curse.maven:exp-401955:" + arsnouveau_fileid)
 
-    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.5.3:api") // Curios
-    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:1.16.5-4.0.5.3")
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:" + curios_version + ":api") // Curios
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:" + curios_version)
 
-    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.2:api") // Patchouli
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.2")
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:" + patchouli_version + ":api") // Patchouli
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:" + patchouli_version)
 
-    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.16.5:3.0.45') // Gecko Lib
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-' + geckolib_version) // Gecko Lib
 
-    compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.138:api") // Just Enough Items
-    runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.138")
+    compileOnly fg.deobf("mezz.jei:jei-" + jei_version + ":api") // Just Enough Items
+    runtimeOnly fg.deobf("mezz.jei:jei-" + jei_version)
 
-
-    // compileOnly fg.deobf("com.blamejared.crafttweaker:CraftTweaker-1.16.4:7.1.0.84")
-
-    //  runtimeOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:1.16.5-2.1.3.0")
-    // compileOnly fg.deobf("top.theillusivec4.caelus:caelus-forge:1.16.5-2.1.3.0:api")
     annotationProcessor 'org.spongepowered:mixin:0.8.2:processor'
 }
 
