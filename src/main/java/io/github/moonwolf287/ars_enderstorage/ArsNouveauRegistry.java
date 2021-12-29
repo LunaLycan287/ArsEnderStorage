@@ -3,10 +3,7 @@ package io.github.moonwolf287.ars_enderstorage;
 import com.hollingsworth.arsnouveau.api.ArsNouveauAPI;
 import com.hollingsworth.arsnouveau.api.spell.AbstractAugment;
 import com.hollingsworth.arsnouveau.api.spell.AbstractSpellPart;
-import io.github.moonwolf287.ars_enderstorage.glyphs.ColorAugment;
-import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStorageBreak;
-import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStorageChest;
-import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStoragePlace;
+import io.github.moonwolf287.ars_enderstorage.glyphs.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +17,7 @@ public class ArsNouveauRegistry {
         register(EnderStorageChest.INSTANCE);
         register(EnderStorageBreak.INSTANCE);
         register(EnderStoragePlace.INSTANCE);
+        register(EnderStorageTank.INSTANCE);
 
         // Color Glyphs for all MC colors
         for (AbstractAugment augment : ColorAugment.getAllColorGlyphs()) {

@@ -1,4 +1,6 @@
 {
+	"ars_nouveau.school.enderstorage": "EnderStorage",
+
 	"ars_nouveau.glyph_name.enderstorage_chest": "EnderStorage Chest",
 	"ars_nouveau.glyph_desc.enderstorage_chest": "Open an EnderStorage Chest.",
 	"item.ars_nouveau.glyph_enderstorage_chest": "Glyph of access EnderStorage Chest",
@@ -10,6 +12,10 @@
 	"ars_nouveau.glyph_name.enderstorage_place": "EnderStorage Place",
 	"ars_nouveau.glyph_desc.enderstorage_place": "Place Block from an EnderStorage Chest.",
 	"item.ars_nouveau.glyph_enderstorage_place": "Glyph of EnderStorage place block",
+
+	"ars_nouveau.glyph_name.enderstorage_tank": "EnderStorage Tank",
+	"ars_nouveau.glyph_desc.enderstorage_tank": "Place liquids / pick up liquids from / to an EnderStorage tank. Projectiles can not target liquids for picking up and Touch only with sensitive.",
+	"item.ars_nouveau.glyph_enderstorage_tank": "Glyph of use EnderStorage Tank",
 
 	"ars_nouveau.glyph_name.color_black": "Black",
 	"ars_nouveau.glyph_desc.color_black": "Attunes the previous spell to the Black Color Frequency.",

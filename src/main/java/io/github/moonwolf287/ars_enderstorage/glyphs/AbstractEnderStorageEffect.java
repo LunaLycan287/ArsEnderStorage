@@ -3,6 +3,7 @@ package io.github.moonwolf287.ars_enderstorage.glyphs;
 import codechicken.enderstorage.api.Frequency;
 import codechicken.enderstorage.manager.EnderStorageManager;
 import codechicken.enderstorage.storage.EnderItemStorage;
+import codechicken.enderstorage.storage.EnderLiquidStorage;
 import codechicken.lib.colour.EnumColour;
 import com.hollingsworth.arsnouveau.api.spell.AbstractAugment;
 import com.hollingsworth.arsnouveau.api.spell.AbstractEffect;
@@ -20,8 +21,17 @@ public abstract class AbstractEnderStorageEffect extends AbstractEffect {
         super(tag, description);
     }
 
+    @Override
+    public Tier getTier() {
+        return Tier.TWO;
+    }
+
     protected static EnderItemStorage getItemStorage(World world, Frequency frequency) {
         return EnderStorageManager.instance(world.isClientSide).getStorage(frequency, EnderItemStorage.TYPE);
+    }
+
+    protected static EnderLiquidStorage getLiquidStorage(World world, Frequency frequency) {
+        return EnderStorageManager.instance(world.isClientSide).getStorage(frequency, EnderLiquidStorage.TYPE);
     }
 
     protected static Frequency loadFrequency(SpellStats spellStats) {

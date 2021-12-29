@@ -1,15 +1,17 @@
 package io.github.moonwolf287.ars_enderstorage.glyphs;
 
-import codechicken.enderstorage.item.ItemEnderPouch;
 import com.hollingsworth.arsnouveau.api.spell.AbstractAugment;
 import com.hollingsworth.arsnouveau.api.spell.SpellContext;
 import com.hollingsworth.arsnouveau.api.spell.SpellStats;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -35,7 +37,9 @@ public class EnderStorageChest extends AbstractEnderStorageEffect {
 
     @Nullable
     @Override
-    public Item getCraftingReagent() {return new ItemEnderPouch();}
+    public Item getCraftingReagent() {
+        return RegistryObject.of(new ResourceLocation("enderstorage", "ender_pouch"), ForgeRegistries.ITEMS).get();
+    }
 
     @Override
     public String getBookDescription() {

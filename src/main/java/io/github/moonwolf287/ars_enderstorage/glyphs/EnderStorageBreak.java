@@ -42,12 +42,11 @@ public class EnderStorageBreak extends AbstractEnderStorageEffect {
         if (rayTraceResult.getType() == RayTraceResult.Type.BLOCK) {
             BlockRayTraceResult blockTraceResult = (BlockRayTraceResult) rayTraceResult;
             EnderItemStorage storage = getItemStorage(world, loadFrequency(spellStats));
+            ItemStack toolStack = getToolStack(spellStats);
 
             assert shooter != null;
             List<BlockPos> posList = SpellUtil.calcAOEBlocks(shooter, blockTraceResult.getBlockPos(), blockTraceResult,
                                                              spellStats);
-
-            ItemStack toolStack = getToolStack(spellStats);
 
             for (BlockPos pos : posList) {
                 if (!isSafeHarvestable(world, shooter, spellStats, pos)) {
