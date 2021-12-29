@@ -15,10 +15,9 @@ import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ArsEnderStorageMod.MODID)
-public class ArsEnderStorageMod
-{
-    public static ForgeConfigSpec SERVER_CONFIG;
-    public static final String MODID = "ars_enderstorage";
+public class ArsEnderStorageMod {
+    public static       ForgeConfigSpec SERVER_CONFIG;
+    public static final String          MODID = "ars_enderstorage";
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
@@ -38,6 +37,7 @@ public class ArsEnderStorageMod
     private void doClientStuff(final FMLClientSetupEvent event) {
         //Nothing to do here (yet)
     }
+
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
@@ -47,7 +47,7 @@ public class ArsEnderStorageMod
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {

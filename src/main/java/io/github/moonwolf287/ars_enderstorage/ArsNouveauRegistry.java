@@ -1,9 +1,12 @@
 package io.github.moonwolf287.ars_enderstorage;
 
-import io.github.moonwolf287.ars_enderstorage.glyphs.ColorGlyph;
-import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStorageChest;
 import com.hollingsworth.arsnouveau.api.ArsNouveauAPI;
+import com.hollingsworth.arsnouveau.api.spell.AbstractAugment;
 import com.hollingsworth.arsnouveau.api.spell.AbstractSpellPart;
+import io.github.moonwolf287.ars_enderstorage.glyphs.ColorAugment;
+import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStorageBreak;
+import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStorageChest;
+import io.github.moonwolf287.ars_enderstorage.glyphs.EnderStoragePlace;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,28 +18,17 @@ public class ArsNouveauRegistry {
 
     protected static void registerGlyphs() {
         register(EnderStorageChest.INSTANCE);
+        register(EnderStorageBreak.INSTANCE);
+        register(EnderStoragePlace.INSTANCE);
 
         // Color Glyphs for all MC colors
-        register(ColorGlyph.WHITE);
-        register(ColorGlyph.ORANGE);
-        register(ColorGlyph.MAGENTA);
-        register(ColorGlyph.LIGHT_BLUE);
-        register(ColorGlyph.YELLOW);
-        register(ColorGlyph.LIME);
-        register(ColorGlyph.PINK);
-        register(ColorGlyph.GRAY);
-        register(ColorGlyph.LIGHT_GRAY);
-        register(ColorGlyph.CYAN);
-        register(ColorGlyph.PURPLE);
-        register(ColorGlyph.BLUE);
-        register(ColorGlyph.BROWN);
-        register(ColorGlyph.GREEN);
-        register(ColorGlyph.RED);
-        register(ColorGlyph.BLACK);
+        for (AbstractAugment augment : ColorAugment.getAllColorGlyphs()) {
+            register(augment);
+        }
     }
 
     private static void register(AbstractSpellPart spellPart) {
-        ArsNouveauAPI.getInstance().registerSpell(spellPart.tag,spellPart);
+        ArsNouveauAPI.getInstance().registerSpell(spellPart.tag, spellPart);
         registeredSpells.add(spellPart);
     }
 }

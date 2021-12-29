@@ -1,69 +1,77 @@
 {
-	"ars_nouveau.glyph_name.enderstorage_chest": "Glyph of EnderStorage Chest",
+	"ars_nouveau.glyph_name.enderstorage_chest": "EnderStorage Chest",
 	"ars_nouveau.glyph_desc.enderstorage_chest": "Open an EnderStorage Chest.",
 	"item.ars_nouveau.glyph_enderstorage_chest": "Glyph of access EnderStorage Chest",
 
-	"ars_nouveau.glyph_name.color_black": "Glyph of Black Frequency",
+	"ars_nouveau.glyph_name.enderstorage_break": "EnderStorage Break",
+	"ars_nouveau.glyph_desc.enderstorage_break": "Break blocks and move them to an EnderStorage Chest. Can be amplified to increase the harvest level. Sensitive will simulate breaking blocks with Shears instead of a pickaxe.",
+	"item.ars_nouveau.glyph_enderstorage_break": "Glyph of EnderStorage Break",
+
+	"ars_nouveau.glyph_name.enderstorage_place": "EnderStorage Place",
+	"ars_nouveau.glyph_desc.enderstorage_place": "Place Block from an EnderStorage Chest.",
+	"item.ars_nouveau.glyph_enderstorage_place": "Glyph of EnderStorage place block",
+
+	"ars_nouveau.glyph_name.color_black": "Black",
 	"ars_nouveau.glyph_desc.color_black": "Attunes the previous spell to the Black Color Frequency.",
 	"item.ars_nouveau.glyph_color_black": "Glyph of Black Color Frequency",
 
-	"ars_nouveau.glyph_name.color_blue": "Glyph of Blue Frequency",
+	"ars_nouveau.glyph_name.color_blue": "Blue",
 	"ars_nouveau.glyph_desc.color_blue": "Attunes the previous spell to the Blue Color Frequency.",
 	"item.ars_nouveau.glyph_color_blue": "Glyph of Blue Color Frequency",
 
-	"ars_nouveau.glyph_name.color_brown": "Glyph of Brown Frequency",
+	"ars_nouveau.glyph_name.color_brown": "Brown",
 	"ars_nouveau.glyph_desc.color_brown": "Attunes the previous spell to the Brown Color Frequency.",
 	"item.ars_nouveau.glyph_color_brown": "Glyph of Brown Color Frequency",
 
-	"ars_nouveau.glyph_name.color_cyan": "Glyph of Cyan Frequency",
+	"ars_nouveau.glyph_name.color_cyan": "Cyan",
 	"ars_nouveau.glyph_desc.color_cyan": "Attunes the previous spell to the Cyan Color Frequency.",
 	"item.ars_nouveau.glyph_color_cyan": "Glyph of Cyan Color Frequency",
 
-	"ars_nouveau.glyph_name.color_gray": "Glyph of Gray Frequency",
+	"ars_nouveau.glyph_name.color_gray": "Gray",
 	"ars_nouveau.glyph_desc.color_gray": "Attunes the previous spell to the Gray Color Frequency.",
 	"item.ars_nouveau.glyph_color_gray": "Glyph of Gray Color Frequency",
 
-	"ars_nouveau.glyph_name.color_green": "Glyph of Green Frequency",
+	"ars_nouveau.glyph_name.color_green": "Green",
 	"ars_nouveau.glyph_desc.color_green": "Attunes the previous spell to the Green Color Frequency.",
 	"item.ars_nouveau.glyph_color_green": "Glyph of Green Color Frequency",
 
-	"ars_nouveau.glyph_name.color_light_blue": "Glyph of Light Blue Frequency",
+	"ars_nouveau.glyph_name.color_light_blue": "Light Blue",
 	"ars_nouveau.glyph_desc.color_light_blue": "Attunes the previous spell to the Light Blue Color Frequency.",
 	"item.ars_nouveau.glyph_color_light_blue": "Glyph of Light Blue Color Frequency",
 
-	"ars_nouveau.glyph_name.color_light_gray": "Glyph of Light Gray Frequency",
+	"ars_nouveau.glyph_name.color_light_gray": "Light Gray",
 	"ars_nouveau.glyph_desc.color_light_gray": "Attunes the previous spell to the Light Gray Color Frequency.",
 	"item.ars_nouveau.glyph_color_light_gray": "Glyph of Light Gray Color Frequency",
 
-	"ars_nouveau.glyph_name.color_lime": "Glyph of Lime Frequency",
+	"ars_nouveau.glyph_name.color_lime": "Lime",
 	"ars_nouveau.glyph_desc.color_lime": "Attunes the previous spell to the Lime Color Frequency.",
 	"item.ars_nouveau.glyph_color_lime": "Glyph of Lime Color Frequency",
 
-	"ars_nouveau.glyph_name.color_magenta": "Glyph of Magenta Frequency",
+	"ars_nouveau.glyph_name.color_magenta": "Magenta",
 	"ars_nouveau.glyph_desc.color_magenta": "Attunes the previous spell to the Magenta Color Frequency.",
 	"item.ars_nouveau.glyph_color_magenta": "Glyph of Magenta Color Frequency",
 
-	"ars_nouveau.glyph_name.color_orange": "Glyph of Orange Frequency",
+	"ars_nouveau.glyph_name.color_orange": "Orange",
 	"ars_nouveau.glyph_desc.color_orange": "Attunes the previous spell to the Orange Color Frequency.",
 	"item.ars_nouveau.glyph_color_orange": "Glyph of Orange Color Frequency",
 
-	"ars_nouveau.glyph_name.color_pink": "Glyph of Pink Frequency",
+	"ars_nouveau.glyph_name.color_pink": "Pink",
 	"ars_nouveau.glyph_desc.color_pink": "Attunes the previous spell to the Pink Color Frequency.",
 	"item.ars_nouveau.glyph_color_pink": "Glyph of Pink Color Frequency",
 
-	"ars_nouveau.glyph_name.color_purple": "Glyph of Purple Frequency",
+	"ars_nouveau.glyph_name.color_purple": "Purple",
 	"ars_nouveau.glyph_desc.color_purple": "Attunes the previous spell to the Purple Color Frequency.",
 	"item.ars_nouveau.glyph_color_purple": "Glyph of Purple Color Frequency",
 
-	"ars_nouveau.glyph_name.color_red": "Glyph of Red Frequency",
+	"ars_nouveau.glyph_name.color_red": "Red",
 	"ars_nouveau.glyph_desc.color_red": "Attunes the previous spell to the Red Color Frequency.",
 	"item.ars_nouveau.glyph_color_red": "Glyph of Red Color Frequency",
 
-	"ars_nouveau.glyph_name.color_white": "Glyph of White Frequency",
+	"ars_nouveau.glyph_name.color_white": "White",
 	"ars_nouveau.glyph_desc.color_white": "Attunes the previous spell to the White Color Frequency.",
 	"item.ars_nouveau.glyph_color_white": "Glyph of White Color Frequency",
 
-	"ars_nouveau.glyph_name.color_yellow": "Glyph of Yellow Frequency",
+	"ars_nouveau.glyph_name.color_yellow": "Yellow",
 	"ars_nouveau.glyph_desc.color_yellow": "Attunes the previous spell to the Yellow Color Frequency.",
 	"item.ars_nouveau.glyph_color_yellow": "Glyph of Yellow Color Frequency"
 }

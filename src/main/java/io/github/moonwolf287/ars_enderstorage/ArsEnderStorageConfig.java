@@ -10,7 +10,7 @@ public class ArsEnderStorageConfig {
 
     private ArsEnderStorageConfig() {}
 
-    public static void registerGlyphConfigs(){
+    public static void registerGlyphConfigs() {
         RegistryHelper.generateConfig(ArsEnderStorageMod.MODID, ArsNouveauRegistry.registeredSpells);
     }
 

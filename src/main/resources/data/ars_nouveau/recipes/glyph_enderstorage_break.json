@@ -1,0 +1,21 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "item_1": [
+    {
+      "item": "ars_nouveau:glyph_enderstorage_chest"
+    }
+  ],
+  "item_2": [
+    {
+      "item": "ars_nouveau:glyph_break"
+    }
+  ],
+  "reagent": [
+    {
+      "item": "ars_nouveau:marvelous_clay"
+    }
+  ],
+  "output": {
+    "item": "ars_nouveau:glyph_enderstorage_break"
+  }
+}
