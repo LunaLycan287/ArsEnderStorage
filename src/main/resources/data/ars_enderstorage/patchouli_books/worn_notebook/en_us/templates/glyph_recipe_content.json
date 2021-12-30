@@ -1,0 +1,56 @@
+{
+  "processor": "io.github.moonwolf287.ars_enderstorage.patchouli.NewGlyphPressProcessor",
+  "components": [
+    {
+      "type":"item",
+      "item":"#clay_type",
+      "framed":true,
+      "x":10,
+      "y":15
+    },
+    {
+      "type":"item",
+      "item":"#reagent",
+      "framed":true,
+      "x":40,
+      "y":15
+    },
+    {
+      "type":"image",
+      "image":"patchouli:textures/gui/crafting.png",
+      "width": 16,
+      "height": 16,
+      "texture_width": 128,
+      "u": 62,
+      "v": 23,
+      "x": 65,
+      "y": 15
+    },
+    {
+      "type":"item",
+      "item":"#output",
+      "framed":true,
+      "link_recipe": true,
+      "x":90,
+      "y":15
+    },
+    {
+      "type": "text",
+      "text": "Tier: #tier#",
+      "x": 0,
+      "y": 40
+    },
+    {
+      "type": "text",
+      "text": "Casting Cost: #mana_cost#",
+      "x": 0,
+      "y": 50
+    },
+    {
+      "type": "text",
+      "text": "Spell Schools: #schools#",
+      "x": 0,
+      "y": 60
+    }
+  ]
+}

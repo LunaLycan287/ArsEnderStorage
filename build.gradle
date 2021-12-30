@@ -26,8 +26,6 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-
-version = mod_version
 group = groupid // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = modid + '-' + mc_version
 
@@ -171,7 +169,7 @@ jar {
                 "Specification-Vendor"    : "Moonwolf287",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
-                "Implementation-Version"  : "${archiveVersion}",
+                "Implementation-Version"  : getArchiveVersion(),
                 "Implementation-Vendor"   : "Moonwolf287",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
         ])

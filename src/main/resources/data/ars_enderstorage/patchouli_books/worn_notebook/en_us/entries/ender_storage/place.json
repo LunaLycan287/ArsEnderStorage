@@ -1,0 +1,24 @@
+{
+  "name": "ars_nouveau.glyph_name.enderstorage_place",
+  "icon": "ars_nouveau:glyph_enderstorage_place",
+  "category": "ender_storage",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "text",
+      "text": "ars_nouveau.book.enderstorage_place.page1"
+    },
+    {
+      "type": "apparatus_recipe",
+      "recipe": "ars_nouveau:glyph_enderstorage_place"
+    },
+    {
+      "type": "text",
+      "text": "ars_nouveau.book.enderstorage.page.attune"
+    },
+    {
+      "type": "relations",
+      "entries":["ars_enderstorage:ender_storage/color_augments", "ars_enderstorage:ender_storage/break", "ars_enderstorage:ender_storage/chest"]
+    }
+  ]
+}

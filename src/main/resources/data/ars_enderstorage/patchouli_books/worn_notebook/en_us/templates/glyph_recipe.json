@@ -1,0 +1,19 @@
+{
+  "components": [
+    {
+      "type": "header",
+      "text": "Glyph Press Recipe",
+      "x": -1,
+      "y": -1
+    }
+  ],
+  "include": [
+    {
+      "template": "ars_enderstorage:glyph_recipe_content",
+      "as": "recipe1",
+      "using": {
+        "recipe": "#recipe"
+      }
+    }
+  ]
+}

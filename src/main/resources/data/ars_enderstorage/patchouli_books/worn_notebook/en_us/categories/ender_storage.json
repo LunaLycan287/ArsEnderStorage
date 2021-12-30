@@ -1,0 +1,6 @@
+{
+  "name": "EnderStorage",
+  "description": "Everything relating to the Ars EnderStorage addon.",
+  "icon": "ars_nouveau:glyph_enderstorage_chest",
+  "sortnum":22
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ars_nouveau.glyph_name.enderstorage_tank",
+  "icon": "ars_nouveau:glyph_enderstorage_tank",
+  "category": "ender_storage",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "text",
+      "text": "ars_nouveau.book.enderstorage_tank.page1"
+    },
+    {
+      "type": "glyph_recipe",
+      "recipe": "ars_nouveau:glyph_enderstorage_tank",
+      "tier": "TWO",
+      "mana_cost": "Medium",
+      "clay_type": "ars_nouveau:marvelous_clay",
+      "reagent": "enderstorage:ender_tank"
+    },
+    {
+      "type": "text",
+      "text": "ars_nouveau.book.enderstorage.page.attune"
+    },
+    {
+      "type": "relations",
+      "entries":["ars_enderstorage:ender_storage/color_augments"]
+    }
+  ]
+}

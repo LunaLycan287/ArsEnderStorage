@@ -1,0 +1,52 @@
+{
+  "name": "ars_nouveau.book.color_augment.title",
+  "icon": "ars_nouveau:glyph_color_red",
+  "category": "ender_storage",
+  "priority": true,
+  "pages": [
+    {
+      "type": "text",
+      "text": "ars_nouveau.book.color_augment.page1"
+    },
+    {
+      "type": "ars_enderstorage:double_glyph_recipe",
+      "recipe1": "ars_nouveau:glyph_color_white",
+      "recipe2": "ars_nouveau:glyph_color_orange"
+    },
+    {
+      "type": "ars_enderstorage:double_glyph_recipe",
+      "recipe1": "ars_nouveau:glyph_color_magenta",
+      "recipe2": "ars_nouveau:glyph_color_light_blue"
+    },
+    {
+      "type": "ars_enderstorage:double_glyph_recipe",
+      "recipe1": "ars_nouveau:glyph_color_yellow",
+      "recipe2": "ars_nouveau:glyph_color_lime"
+    },
+    {
+      "type": "ars_enderstorage:double_glyph_recipe",
+      "recipe1": "ars_nouveau:glyph_color_pink",
+      "recipe2": "ars_nouveau:glyph_color_gray"
+    },
+    {
+      "type": "ars_enderstorage:double_glyph_recipe",
+      "recipe1": "ars_nouveau:glyph_color_light_gray",
+      "recipe2": "ars_nouveau:glyph_color_cyan"
+    },
+    {
+      "type": "ars_enderstorage:double_glyph_recipe",
+      "recipe1": "ars_nouveau:glyph_color_purple",
+      "recipe2": "ars_nouveau:glyph_color_blue"
+    },
+    {
+      "type": "ars_enderstorage:double_glyph_recipe",
+      "recipe1": "ars_nouveau:glyph_color_brown",
+      "recipe2": "ars_nouveau:glyph_color_green"
+    },
+    {
+      "type": "ars_enderstorage:double_glyph_recipe",
+      "recipe1": "ars_nouveau:glyph_color_red",
+      "recipe2": "ars_nouveau:glyph_color_black"
+    }
+  ]
+}
