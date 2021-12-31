@@ -1,7 +1,6 @@
 package io.github.moonwolf287.ars_enderstorage;
 
 import net.minecraft.block.Block;
-import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -10,17 +9,17 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ArsEnderStorageMod.MODID)
 public class ArsEnderStorageMod {
-    public static       ForgeConfigSpec SERVER_CONFIG;
-    public static final String          MODID = "ars_enderstorage";
+    //Currently not using any config
+    //public static ForgeConfigSpec SERVER_CONFIG
+    public static final String MODID = "ars_enderstorage";
 
-    // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    // Currently not used
+    // Directly reference a log4j logger
+    // private static final Logger LOGGER = LogManager.getLogger()
 
     public ArsEnderStorageMod() {
         ArsNouveauRegistry.registerGlyphs();
@@ -48,6 +47,8 @@ public class ArsEnderStorageMod {
     // Event bus for receiving Registry Events)
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
+        private RegistryEvents() {}
+
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here

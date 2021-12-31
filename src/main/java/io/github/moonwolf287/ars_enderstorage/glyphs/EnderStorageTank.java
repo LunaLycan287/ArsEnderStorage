@@ -45,11 +45,14 @@ public class EnderStorageTank extends AbstractEnderStorageEffect {
     @Override
     public void onResolve(RayTraceResult rayTraceResult, World world, @Nullable LivingEntity shooter,
                           SpellStats spellStats, SpellContext spellContext) {
+        if (shooter == null) {
+            return; // This can only happen from other add-ons and is required to check for calcAOEBlocks
+        }
+
         if (rayTraceResult.getType() == RayTraceResult.Type.BLOCK) {
             BlockRayTraceResult blockTraceResult = (BlockRayTraceResult) rayTraceResult;
             EnderLiquidStorage storage = getLiquidStorage(world, loadFrequency(spellStats));
 
-            assert shooter != null;
             List<BlockPos> posList = SpellUtil.calcAOEBlocks(shooter, blockTraceResult.getBlockPos(), blockTraceResult,
                                                              spellStats);
 

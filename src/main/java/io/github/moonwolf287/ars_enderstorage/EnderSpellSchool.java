@@ -4,4 +4,6 @@ import com.hollingsworth.arsnouveau.api.spell.SpellSchool;
 
 public class EnderSpellSchool {
     public static final SpellSchool INSTANCE = new SpellSchool("enderstorage");
+
+    private EnderSpellSchool() {}
 }
