@@ -4,7 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
@@ -24,6 +26,8 @@ public class ArsEnderStorageMod {
     public ArsEnderStorageMod() {
         ArsNouveauRegistry.registerGlyphs();
         ArsEnderStorageConfig.registerGlyphConfigs();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ArsEnderStorageConfig.CLIENT_CONFIG);
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
         MinecraftForge.EVENT_BUS.register(this);
